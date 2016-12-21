@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+<html>
+	<head>
+		<title>Solar</title>
+		<link rel="shortcut icon" href="dist/img/favicon.ico">
+		<link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="dist/css/style.css">
+	</head>
+	<body class="ng-cloak">
+		<div class="container-fluid" ng-controller="ctrl as parent">
+			<div class="row">
+				<div class="col-sm-12 text-center parent-title">
+					<h3>{{title}}</h3>
+					<h3>{{parent.title}}</h3>
+					{{titleScope}}
+				</div>
+				<div class="col-sm-6" ng-repeat="inc in parent.includes">
+					<div ng-include="inc"></div>
+				</div>
+			</div>
+		</div>
+		<script src="vendor/angular/js/angular.min.js"></script>
+		<script src="dist/js/app.js"></script>
+		<script src="controllers/1.js"></script>
+		<script src="controllers/2.js"></script>
+		<script src="controllers/3.js"></script>
+		<script src="controllers/4.js"></script>
+	</body>
+</html>
